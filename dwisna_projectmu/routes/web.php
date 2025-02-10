@@ -21,7 +21,7 @@ Route::get('/user/{id}', function ($id) {
 Route::get('/user','UserController@index');
 // Route::get('/user', [CustomerController::class, 'index']);
 
-// Route::get($uri, $callback);
+ Route::get($uri, $callback);
 // Route::post($uri, $callback);
 // Route::put($uri, $callback);
 // Route::patch($uri, $callback);
