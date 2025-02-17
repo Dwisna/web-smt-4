@@ -29,7 +29,7 @@ class ManagementUserController extends Controller{
         return "Method ini nantinya akan digunakan untuk mengubah data user dengan id-".$id;
     }
 
-    public function destory($id){
+    public function destroy($id){
         return "Method ini nantinya digunakan untuk menghapus data user dengan id-".$id;
     }
 }
