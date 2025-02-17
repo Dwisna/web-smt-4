@@ -133,6 +133,8 @@ Route::match(['get', 'post'], '/user/{id}/profile/update', [ProfileController::c
 
 
 //Acara 5
-Route::get('/user', 'ManagementUserController@index');
+use App\Http\Controllers\ManagementUserController;
 
-Route::resource('/user', 'ManagementUserController');
+Route::get('/user7', [ManagementUserController::class, 'index']);
+
+Route::resource('/user', ManagementUserController::class);
