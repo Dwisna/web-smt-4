@@ -130,3 +130,9 @@ Route::name('admin.')->group(function (){
 //tambahan
 // Route::post('/user/{id}/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 Route::match(['get', 'post'], '/user/{id}/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+
+//Acara 5
+Route::get('/user', 'ManagementUserController@index');
+
+Route::resource('/user', 'ManagementUserController');
