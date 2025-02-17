@@ -138,3 +138,9 @@ use App\Http\Controllers\ManagementUserController;
 Route::get('/user7', [ManagementUserController::class, 'index']);
 
 Route::resource('/user', ManagementUserController::class);
+
+
+//Acara 6
+Route::get("/home", function(){
+    return view("home");
+});
