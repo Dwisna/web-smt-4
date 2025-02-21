@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -129,7 +130,7 @@ Route::name('admin.')->group(function (){
 
 //tambahan
 // Route::post('/user/{id}/profile/update', [ProfileController::class, 'update'])->name('profile.update');
-Route::match(['get', 'post'], '/user/{id}/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+// Route::match(['get', 'post'], '/user/{id}/profile/update', 'ProfileController, update')->name('profile.update');
 
 
 //Acara 5
@@ -147,5 +148,5 @@ Route::get("/home", function(){
 
 //Acara 7
 Route::group(['namespace' => 'App\Http\Controllers\Frontend'], function(){
-    Route::resource('/home', HomeController::class);
+    Route::resource('home', HomeController::class);
 });
