@@ -41,7 +41,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
+        <img src="{{ asset('frontend/assets/img/logo.png')}}" alt="">
         <!-- Uncomment the line below if you also wish to use text logo -->
         <!-- <h1 class="sitename">Butterfly</h1>  -->
       </a>
@@ -96,7 +96,7 @@
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+            <img src="{{  asset(path: 'frontend/assets/img/hero-img.png')}}" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
         <div class="row gy-4">
 
           <div class="col-lg-6 position-relative" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="{{  asset(path: 'frontend/img/about.png')}}" class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
           </div>
 
@@ -154,7 +154,7 @@
     <!-- Stats Section -->
     <section id="stats" class="stats section light-background">
 
-      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+      <img src="{{  asset('frontend/img/stats-bg.jpg'}}" alt="" data-aos="fade-in">
 
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
@@ -202,11 +202,11 @@
         <div class="row g-0 clients-wrap">
 
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <img src="{{  asset('frontend/img/clients/client-1.png')}}" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+            <img src="{{  asset('frontend/img/clients/client-2.png')}}" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
           <div class="col-xl-3 col-md-4 client-logo">
