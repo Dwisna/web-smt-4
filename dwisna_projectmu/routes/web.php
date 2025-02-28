@@ -93,15 +93,15 @@ Route::get('/user/{id}/profile', function ($id) {
 })->name('profile');
 
 //Middleware
-Route::middleware(['first', 'second'])->group(function () {
-    Route::get('/', function () {
-        //
-    });
+// Route::middleware(['first', 'second'])->group(function () {
+//     Route::get('/', function () {
+//         //
+//     });
 
-    Route::get('user/profile', function () {
-        //
-    });
-});
+//     Route::get('user/profile', function () {
+//         //
+//     });
+// });
 
 //namespaces
 Route::namespace('Admin')->group(function (){
