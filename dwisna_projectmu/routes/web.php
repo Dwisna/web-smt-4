@@ -4,6 +4,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\backend\DashboardController;
 
 // Rute dasar
 Route::get('/', function () {
@@ -150,6 +151,12 @@ Route::get("/home", function(){
 Route::group(['namespace' => 'App\Http\Controllers\Frontend'], function(){
     Route::resource('home', HomeController::class);
 });
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//acara8
+Route::group(['namespace'=>'App\Http\Controllers\backend'],function()
+    {
+        Route::resource('/dashboard',DashboardController::class);
+    });
