@@ -160,3 +160,10 @@ Route::group(['namespace'=>'App\Http\Controllers\backend'],function()
     {
         Route::resource('/dashboard',DashboardController::class);
     });
+ //ACARA 13
+ Route::group(['namespace' => 'App\Http\Controllers\backend'], function()  
+ {  
+     Route::resource('/dashboard', DashboardController::class);  
+     Route::resource('/pendidikan', PendidikanController::class);  
+     Route::resource('/pengalaman_kerja', PengalamanKerjaController::class);  
+ });
