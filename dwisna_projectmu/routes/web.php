@@ -5,6 +5,8 @@ use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\DashboardController;
+use App\Http\Controllers\backend\PendidikanController;
+use App\Http\Controllers\backend\PengalamanKerjaController;
 
 // Rute dasar
 Route::get('/', function () {
@@ -167,3 +169,15 @@ Route::group(['namespace'=>'App\Http\Controllers\backend'],function()
      Route::resource('/pendidikan', PendidikanController::class);  
      Route::resource('/pengalaman_kerja', PengalamanKerjaController::class);  
  });
+
+ Route::get('/dashboard', [DashboardController::class, 'index'])->name('backend.dashboard');
+
+    Route::get('/pengalaman-kerja', [PengalamanKerjaController::class, 'index'])->name('pengalaman_kerja.index');
+
+
+    //ACARA 15
+    Route::group(['namespace' => 'Backend'], function()
+    {
+        Route::resource('dashboard', 'DashboardController');
+        Route::resource('pendidikan', 'PendidikanController');
+    });
