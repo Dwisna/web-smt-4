@@ -181,3 +181,12 @@ Route::group(['namespace'=>'App\Http\Controllers\backend'],function()
         Route::resource('dashboard', 'DashboardController');
         Route::resource('pendidikan', 'PendidikanController');
     });
+
+    //Acara 17
+    Route::get('/session/create', 'SessionController@create');
+    Route::get('/session/show', 'SessionController@show');
+    Route::get('/session/delete', 'SessionController@delete');
+    Route::get('/pegawai/{nama}', 'PegawaiController@index');
+    Route::get('/formulir', 'PegawaiController@formulir');
+    Route::getpost('/formulir/proses', 'PegawaiController@proses');
+    
