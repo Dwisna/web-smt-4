@@ -190,3 +190,9 @@ Route::group(['namespace'=>'App\Http\Controllers\backend'],function()
     Route::get('/formulir', 'PegawaiController@formulir');
     Route::getpost('/formulir/proses', 'PegawaiController@proses');
     
+    // acara 18
+Route::get('/coberror','CobaController@index');
+
+// acara 19
+Route::get('/upload','UploadController@upload')->name('upload');
+Route::post('/upload/proses','UploadController@proses_upload')->name('upload.proses');
