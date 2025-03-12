@@ -82,3 +82,9 @@ Route::get('/coberror', [CobaController::class, 'index']);
 Route::get('/upload', [UploadController::class, 'upload'])->name('upload');
 Route::post('/upload/proses', [UploadController::class, 'proses_upload'])->name('upload.proses');
 Route::post('/upload/resize', [UploadController::class, 'resize_upload'])->name('upload.resize');
+
+// Acara 20: Upload dropsone dan file dokumen
+Route::get('/dropzone', [UploadController::class, 'dropzone'])->name('dropzone');
+Route::post('/dropzone/store', [UploadController::class, 'dropzoneStore'])->name('dropzone.store');
+Route::get('/pdf_upload', [UploadController::class, 'pdf_upload'])->name('pdf.upload');
+Route::post('/pdf/store', [UploadController::class, 'pdf_store'])->name('pdf.store');
